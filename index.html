@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Izuka Dev | Portfolio</title>
+
+  <!----- Confirugasi Ke Google --->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="logo"><span>&lt;/&gt;</span></div>
+    <strong>Izuka Dev</strong>
+    <div class="toggle" onclick="toggleTheme()">
+      <span id="themeIcon" class="material-symbols-outlined">dark_mode</span>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner"></div>
+
+  <!-- Profile -->
+  <div class="profile">
+    <img src="./assest/pict.jpg" alt="Profile">
+    <h1>XRizal</h1>
+    <p>Beginner programmer</p>
+    <p>Saya hanya pemula yang masih belajar coding dan berusaha semaksimal mungkin</p>
+  </div>
+  
+  <div class="cta">
+    <a href="./cv-izuka-dev.pdf" download class="btn-cv">
+      <span class="material-symbols-outlined">download</span>
+      Download CV
+    </a>
+  </div>
+
+  <!-- Projects & Skills -->
+  <div class="container">
+    <div class="card">
+      <h3 class="section-title">Projects</h3>
+
+      <div class="project-item">
+        <h4>REST API Downloader</h4>
+        <p>API downloader cepat & scalable untuk berbagai platform.</p>
+        <span class="project-tag">Node.js</span>
+      </div>
+
+      <div class="project-item">
+        <h4>Telegram OTP Bot</h4>
+        <p>Bot otomatis pembelian & manajemen OTP.</p>
+        <span class="project-tag">Telegram</span>
+      </div>
+
+      <div class="project-item">
+        <h4>Bot WhatApp Multi Device</h4>
+        <p>Bot otomatis untuk menjaga group dengan menggunakan fitur fitur terkeren,
+        yang menggunakan API, dan terdapat juga permainan yang keren.</p>
+        <span class="project-tag">NodeJs</span>
+      </div>
+
+      <div class="project-item">
+        <h4>CDN Uploader</h4>
+        <p>Uploader file cepat dengan sistem CDN.</p>
+        <span class="project-tag">Cloud</span>
+      </div>
+    </div>
+
+    <div class="card bio-card">
+      <h3 class="bio-title">About Me</h3>
+
+      <div class="bio-item">
+        <span class="bio-label">Username</span>
+        <span class="bio-value accent">XRizal</span>
+      </div>
+
+      <div class="bio-item">
+        <span class="bio-label">Nama</span>
+        <span class="bio-value gradient">
+          Moh. Rizal Nida Asfiyak
+        </span>
+      </div>
+
+      <div class="bio-item">
+        <span class="bio-label">Alamat</span>
+        <span class="bio-value address">
+          <span class="addr-line">Dsn. Manyaran</span>
+          <span class="addr-line">Kec. Banyakan</span>
+          <span class="addr-line">Kab. Kediri</span>
+          <span class="addr-line accent">Prov. Jawa Timur</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Skills</h3>
+      <div class="skill">JavaScript<div class="bar"><div style="width:90%"></div></div></div>
+      <div class="skill">Java<div class="bar"><div style="width:50%"></div></div></div>
+      <div class="skill">Node.js<div class="bar"><div style="width:85%"></div></div></div>
+      <div class="skill">HTML & CSS<div class="bar"><div style="width:80%"></div></div></div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="card education">
+      <h3>Background Pendidikan</h3>
+
+      <div class="edu-item" onclick="toggleEdu(this)">
+        <div class="edu-header">
+          <span>MI (Madrasah Ibtidaiyah)</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="edu-body">
+          <p>MI - Banyakan</p>
+          <small>2010 – 2016</small>
+        </div>
+      </div>
+
+      <div class="edu-item" onclick="toggleEdu(this)">
+        <div class="edu-header">
+          <span>SMP / MTs</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="edu-body">
+          <p>SMP Aliklas - KaliBoto Tarokan Kediri</p>
+          <small>2018 – 2021</small>
+        </div>
+      </div>
+
+      <div class="edu-item" onclick="toggleEdu(this)">
+        <div class="edu-header">
+          <span>SMA / SMK / MA</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="edu-body">
+          <p>SMA Al-Qodir - Jabon Drenges Kertosono Nganjuk</p>
+          <small>2021 – 2024</small>
+        </div>
+      </div>
+
+      <div class="edu-item" onclick="toggleEdu(this)">
+        <div class="edu-header">
+          <span>Kuliah S1</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="edu-body">
+          <p>S1 Teknik Informatika - UDN Magetan</p>
+          <small>2025 – Sekarang</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card project-slider">
+      <h3>My Projects</h3>
+
+      <div class="slider-wrapper">
+        <button class="nav left" onclick="slideProject(-1)">
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+
+        <div class="slider" id="projectSlider">
+          <div class="project-card">
+            <h4>REST API Downloader</h4>
+            <p>Fast & scalable downloader API for social media platforms.</p>
+            <small>Node.js • Vercel • Scraping</small>
+          </div>
+
+          <div class="project-card">
+            <h4>Telegram OTP Bot</h4>
+            <p>Automation bot for OTP & virtual number management.</p>
+            <small>Node.js • Telegram Bot API</small>
+          </div>
+          
+          <div class="project-card">
+            <h4>WhatsApp Bot MultiDevice</h4>
+            <p>Bot WhatsApp yang saya kembangkan berfungsi sebagai asisten otomatis untuk berbagai kebutuhan, mulai dari manajemen pengguna, sistem saldo, hingga fitur interaktif berbasis perintah.
+Bot ini dirancang dengan fokus pada stabilitas, kecepatan respon, dan kemudahan
+penggunaan.</p>
+            <small>Node.js • WhatsApp Bot Api</small>
+          </div>
+
+          <div class="project-card">
+            <h4>AI Image Generator</h4>
+            <p>Generate images using AI models with REST API integration.</p>
+            <small>AI • REST API</small>
+          </div>
+
+          <div class="project-card">
+            <h4>CDN Uploader</h4>
+            <p>Simple & fast file uploader with CDN delivery.</p>
+            <small>Cloud • Storage • Web</small>
+          </div>
+        </div>
+
+        <button class="nav right" onclick="slideProject(1)">
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Social Media -->
+<div class="social">
+  <div class="card">
+    <h3>Social Media</h3>
+
+    <div class="social-list">
+
+      <a href="https://wa.me/62881026351241" target="_blank" class="social-item">
+        <span class="material-symbols-outlined">chat</span>
+        <p>WhatsApp</p>
+      </a>
+
+      <a href="https://www.instagram.com/kang_rizal404" target="_blank" class="social-item">
+        <span class="material-symbols-outlined">photo_camera</span>
+        <p>Instagram</p>
+      </a>
+
+      <a href="https://youtube.com/@izukadevreal?si=tiepGRLy2y3CTXZc" target="_blank" class="social-item">
+        <span class="material-symbols-outlined">smart_display</span>
+        <p>YouTube</p>
+      </a>
+
+      <a href="https://github.com/IzukaDev0" target="_blank" class="social-item">
+        <span class="material-symbols-outlined">code</span>
+        <p>GitHub</p>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+  <!-- BIO MODAL -->
+  <div class="bio-modal" id="bioModal" onclick="closeBio(event)">
+    <div class="bio-popup">
+      <img src="./assest/pict.jpg" class="bio-avatar" alt="Avatar">
+
+      <h3>XRizal</h3>
+      <p class="bio-subtitle">Fullstack Developer & Automation Engineer</p>
+
+      <p class="bio-desc">
+        Saya adalah developer yang fokus pada pembuatan bot WhatsApp,
+        REST API, dan sistem otomasi. Terbiasa membangun sistem yang stabil,
+        efisien, dan mudah dikembangkan.
+      </p>
+
+      <div class="bio-highlight">
+        <span>📍 Kediri, Jawa Timur</span>
+        <span>💻 Node.js • JavaScript • REST API</span>
+        <span>🚀 Automation & Bot Development</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      © 2026 <strong>Izuka Dev</strong> • Built with ❤️ using HTML, CSS & JavaScript
+    </p>
+  </footer>
+  <script src="./rizal.js"></script>
+</body>
+</html>
