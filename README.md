@@ -1,4 +1,4 @@
-# Izuka Dev – Portfolio Website
+# XRizal – Portfolio Website
 
 Personal portfolio website built using **HTML, CSS, and JavaScript**.  
 This project serves as a base template to showcase personal profile, skills, projects, education background, and social media links in a clean and modern UI.
